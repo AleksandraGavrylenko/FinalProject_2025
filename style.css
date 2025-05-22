@@ -1,0 +1,33 @@
+*{
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 10px;
+    height: 100vh;
+}
+
+.background {
+    height: 75vh;
+    background-color: lightcoral;
+    justify-items: center;
+    align-content: end;
+}
+
+.pet {
+    height: 10vh;
+    width: 10vh;
+    background-color: palevioletred;
+    padding: 20px;
+}
+
+.ground {
+    height: 25vh;
+    background-color: aquamarine;
+}
+
+.controlsMenu {
+    background-color: aquamarine;
+}
