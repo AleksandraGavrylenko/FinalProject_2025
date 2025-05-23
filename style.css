@@ -31,3 +31,12 @@
 .controlsMenu {
     background-color: aquamarine;
 }
+
+.hungerBarItem{
+    width: 20px;
+    height: 15px;
+    background-color:blueviolet;
+    display: flex inline;
+    justify-self: flex-start;
+    align-self: flex-end;
+}
