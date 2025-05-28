@@ -17,26 +17,44 @@
 }
 
 .pet {
+  
     height: 10vh;
     width: 10vh;
-    background-color: palevioletred;
+    background: color #c46077;;
     padding: 20px;
 }
 
 .ground {
     height: 25vh;
-    background-color: aquamarine;
+    background-color: #6c3125;
 }
 
 .controlsMenu {
-    background-color: aquamarine;
+    background-color: #9b6b59;
 }
 
 .hungerBarItem{
     width: 20px;
     height: 15px;
-    background-color:blueviolet;
+    background-color:#c46077;
     display: flex inline;
     justify-self: flex-start;
     align-self: flex-end;
 }
+
+#feedBtn {
+background-color: #852e3d;
+color: #d4ac91;
+text-decoration: solid;
+border-color:#d4ac91 ;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#moreFoodBtn {
+    background-color: #852e3d;
+    color: #d4ac91;
+    text-decoration: solid;
+    border-color:#d4ac91 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
