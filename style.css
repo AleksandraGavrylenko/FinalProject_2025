@@ -20,8 +20,14 @@
   
     height: 10vh;
     width: 10vh;
-    background: color #c46077;;
     padding: 20px;
+}
+
+.pet img {
+    height: 100%;
+    max-width: fit-content;
+    width: 100%;
+    border-radius: 70%;
 }
 
 .ground {
@@ -40,6 +46,16 @@
     display: flex inline;
     justify-self: flex-start;
     align-self: flex-end;
+    margin: 1px;
+}
+.availableFoodItem{
+    width: 20px;
+    height: 15px;
+    background-color:#c46077;
+    display: flex inline;
+    justify-self: flex-start;
+    align-self: flex-end;
+    margin:1px;
 }
 
 #feedBtn {
