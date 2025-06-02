@@ -41,7 +41,7 @@ function createHungerBar(){
     for(i=0;i<hungerValue;i++){
         const li=document.createElement('li')
         li.className = 'hungerBarItem'
-        li.textContent='[]'
+        li.innerHTML='<img class="bananaIcon" src="images/bananapeel.png" alt="">'
         hungerBarList.appendChild(li)
         console.log('li appended')
     }
@@ -52,8 +52,7 @@ function createAvailableFoodBar(){
     for(i=0;i<availableFood;i++){
         const li=document.createElement('li')
         li.className = 'availableFoodItem'
-        Image = document.createElement('img')
-        Image.src = 'images/banana.png'
+        li.innerHTML ='<img class="bananaIcon" src="images/banana.png" alt="">'
         availableFoodBar.appendChild(li)
         console.log('li appended')
     }
@@ -88,13 +87,13 @@ window.addEventListener('DOMContentLoaded',()=>{
 function faceChanger(){
     let hungerValue = localStorage.getItem('hungerValue')
     if(hungerValue<3){
-        document.querySelector('#face').src = 'images/thumbnail_angry monkey.png'
+        document.querySelector('#petImage').src = 'images/thumbnail_angry_monkey.png'
     }
     else if(hungerValue<6){
-        document.querySelector('#face').src = 'images/thumbnail_happy monkey.png'
+        document.querySelector('#petImage').src = 'images/thumbnail_happy_monkey.png'
     }
     else if(hungerValue<9){
-        document.querySelector('#face').src = 'images/thumbnail_fed monkey.png'
+        document.querySelector('#petImage').src = 'images/thumbnail_fed_monkey.png'
     }
     
 }
