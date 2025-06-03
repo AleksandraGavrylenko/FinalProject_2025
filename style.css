@@ -19,7 +19,7 @@ height: 100%;
 
 .background {
     height: 75vh;
-    background-color: lightcoral;
+    background-color: #f08080;
     justify-items: center;
     align-content: end;
 }
@@ -67,7 +67,12 @@ height: 100%;
     margin:1px;
 }
 
+#feed{
+    position:relative;
+}
+
 #feedBtn {
+position:absolute;
 background-color: #852e3d;
 color: #d4ac91;
 text-decoration: solid;

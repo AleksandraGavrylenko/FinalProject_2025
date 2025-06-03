@@ -1,5 +1,5 @@
 const hungerBar = document.querySelector('#hungerBar')
-const feedBtn = document.querySelector('#feed')
+const feedBtnContainer = document.querySelector('#feed')
 const foodAmount = document.querySelector('#availableFood')
 const hungerBarList = document.querySelector('#hungerBarList')
 const availableFoodBar = document.querySelector('#availableFood')
@@ -57,6 +57,14 @@ function createAvailableFoodBar(){
         console.log('li appended')
     }
 }
+function getRandomPosition(cW,cH){
+    const x= Math.floor(Math.random()*cW)
+    const y= Math.floor(Math.random()*cH)
+    return {x,y}
+}
+function feedBtnLocation(){
+    
+}
 function updateStatusBars(){
     createAvailableFoodBar()
     createHungerBar()
@@ -71,8 +79,8 @@ setInterval(()=>{
     hungerValue --
     localStorage.setItem('hungerValue', hungerValue)
     updateStatusBars()
-    }
-},60000)
+}
+},6000)
 
 
 document.querySelector('#feedBtn').addEventListener('click',feed)
@@ -94,6 +102,10 @@ function faceChanger(){
     }
     else if(hungerValue<9){
         document.querySelector('#petImage').src = 'images/thumbnail_fed_monkey.png'
+    }
+    else {
+        document.querySelector('#petImage').src = 'images/thumbnail_cute_monkey.png'
+
     }
     
 }
