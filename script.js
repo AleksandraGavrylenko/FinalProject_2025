@@ -21,7 +21,9 @@ function feed(){
         availableFood--
         hungerValue++
         storeHungerValue(hungerValue,availableFood)
-        updateStatusBars()
+        document.querySelector('#petImage').src = 'images/thumbnail_fed_monkey.png'
+        createAvailableFoodBar()
+        createHungerBar()
     }
     else{
         alert('no food available right now')
@@ -80,13 +82,26 @@ setInterval(()=>{
     localStorage.setItem('hungerValue', hungerValue)
     updateStatusBars()
 }
-},6000)
+},60000)
+
+
 
 
 document.querySelector('#feedBtn').addEventListener('click',feed)
+document.querySelector('#feedBtn').addEventListener('click',()=>{
+    setTimeout(()=>{
+faceChanger()
+    },750)
+})
 document.querySelector('#moreFoodBtn').addEventListener('click', addFood )
 window.addEventListener('DOMContentLoaded',()=>{
     updateStatusBars()
+})
+document.querySelector('#petImage').addEventListener('mouseover',()=>{
+    document.querySelector('#petImage').classList.toggle('pettingActive')
+})
+document.querySelector('#petImage').addEventListener('mouseout',()=>{
+    document.querySelector('#petImage').classList.toggle('pettingActive')
 })
 
 
@@ -99,9 +114,6 @@ function faceChanger(){
     }
     else if(hungerValue<6){
         document.querySelector('#petImage').src = 'images/thumbnail_happy_monkey.png'
-    }
-    else if(hungerValue<9){
-        document.querySelector('#petImage').src = 'images/thumbnail_fed_monkey.png'
     }
     else {
         document.querySelector('#petImage').src = 'images/thumbnail_cute_monkey.png'
