@@ -3,6 +3,7 @@ const feedBtnContainer = document.querySelector('#feed')
 const foodAmount = document.querySelector('#availableFood')
 const hungerBarList = document.querySelector('#hungerBarList')
 const availableFoodBar = document.querySelector('#availableFood')
+const happinessBar = document.querySelector('#happinessBar')
 
 //storeHungerValue(5,5)
 
@@ -12,7 +13,16 @@ function storeHungerValue(a,b){
     let availableFood = b
     localStorage.setItem('availableFood', availableFood)
 }
-
+function storeHappinessValue(a){
+let happiness = localStorage.getItem('happiness')
+if(happiness===null){
+    let happiness=5
+}
+else{
+happiness = a
+}
+localStorage.setItem('happiness',happiness)
+}
 
 function feed(){
    let availableFood = localStorage.getItem('availableFood')
@@ -59,10 +69,22 @@ function createAvailableFoodBar(){
         console.log('li appended')
     }
 }
+function createHappinessBar(){
+    happinessBar.innerHTML = ''
+    let happiness = localStorage.getItem('happiness')
+    happiness = 5
+    for(i=0;i<happiness;i++){
+        const li=document.createElement('li')
+        li.className = 'happinessItem'
+        li.innerHTML ='<img class="heartIcon" src="images/banana.png" alt="">'
+        happinessBar.appendChild(li)
+        console.log('li appended')
+    }
+}
 function getRandomPosition(cW,cH){
     const x= Math.floor(Math.random()*cW)
     const y= Math.floor(Math.random()*cH)
-    return {x,y}
+    return [x,y]
 }
 function feedBtnLocation(){
     
@@ -70,6 +92,7 @@ function feedBtnLocation(){
 function updateStatusBars(){
     createAvailableFoodBar()
     createHungerBar()
+    createHappinessBar()
     faceChanger()
 }
 setInterval(()=>{

@@ -66,6 +66,15 @@ height: 100%;
     align-self: flex-end;
     margin:1px;
 }
+.happinessItem{
+    width: 20px;
+    height: 15px;
+    /* background-color:#c46077; */
+    display: flex inline;
+    justify-self: flex-start;
+    align-self: flex-end;
+    margin:1px;
+}
 
 #feed{
     position:relative;
