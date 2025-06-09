@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tamagochi Pet Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div class="audioPlayer">
@@ -24,23 +27,32 @@
             
             <div class="controlsMenu">
                 <div id="feed">
+                    <div class="controls">
+                        
+                        <p>Hunger Bar</p>
+                        <div id="hungerBar">
+                            <ul id="hungerBarList"></ul>  
+                        </div>
+                    </div>
+                    <div class="controls">
+                        
+                        <p>Available Food</p>
+                        <div id="availableFood">
+                            
+                        </div>
+                    </div>
+                    <div class="controls">
+                        
+                        <p>Happiness Bar</p>
+                        <div id="happinessBar">
+                            
+                        </div>
+                    </div>
+                    <br>
                     <button id='feedBtn' class="feed">Feed Me</button>
-                    <p>Hunger Bar</p>
-                    <div id="hungerBar">
-                        <ul id="hungerBarList"></ul>
-                        
-                        
-                    </div>
                     <button id='moreFoodBtn' class="feed">Get Food</button>
-                    <p>Available Food</p>
-                    <div id="availableFood">
-                        
-                    </div>
-                    <p>Happiness Bar</p>
-                    <div id="happinessBar">
-                        
-                    </div>
                 </div>
+                
             </div>
         </div>
     </div>

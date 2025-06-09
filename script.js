@@ -76,7 +76,7 @@ function createHappinessBar(){
     for(i=0;i<happiness;i++){
         const li=document.createElement('li')
         li.className = 'happinessItem'
-        li.innerHTML ='<img class="heartIcon" src="images/banana.png" alt="">'
+        li.innerHTML ='<img class="heartIcon" src="images/heart.png" alt="">'
         happinessBar.appendChild(li)
         console.log('li appended')
     }

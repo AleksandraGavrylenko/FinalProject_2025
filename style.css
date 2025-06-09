@@ -7,6 +7,15 @@ body{
      background-color: lightcoral;
 }
 
+
+
+#feed p {
+    color: #852e3d;
+   font-family: "Jersey 10", sans-serif;
+   font-size: 20px;
+
+}
+
 .container {
     padding: 10px;
     height: 100vh;
@@ -39,15 +48,21 @@ height: 100%;
 }
 
 .ground {
-    height: 25vh;
+    height: 15vh;
     background-color: #6c3125;
+    border-radius: 5px;
 }
 
 .controlsMenu {
     background-color: #9b6b59;
     width: 85vw;
+    border-radius: 5px;
 }
-
+.controls {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .hungerBarItem{
     width: 20px;
     height: 15px;
@@ -60,7 +75,6 @@ height: 100%;
 .availableFoodItem{
     width: 20px;
     height: 15px;
-    /* background-color:#c46077; */
     display: flex inline;
     justify-self: flex-start;
     align-self: flex-end;
@@ -69,7 +83,6 @@ height: 100%;
 .happinessItem{
     width: 20px;
     height: 15px;
-    /* background-color:#c46077; */
     display: flex inline;
     justify-self: flex-start;
     align-self: flex-end;
@@ -81,12 +94,16 @@ height: 100%;
 }
 
 #feedBtn {
-position:absolute;
+position:relative;
 background-color: #852e3d;
 color: #d4ac91;
 text-decoration: solid;
 border-color:#d4ac91 ;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-family: "Jersey 10", sans-serif;
+font-size: 20px;
+border-radius: 5px;
+height: 50px;
+width: 100px;
 }
 
 #moreFoodBtn {
@@ -94,7 +111,11 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #d4ac91;
     text-decoration: solid;
     border-color:#d4ac91 ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
 }
 .bananaIcon{
 object-fit: cover;
