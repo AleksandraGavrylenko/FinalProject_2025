@@ -14,9 +14,15 @@ function storeHungerValue(a,b){
     localStorage.setItem('availableFood', availableFood)
 }
 function storeHappinessValue(a){
-let happiness = localStorage.getItem('happiness')
+let happiness = a
 if(happiness===null){
-    let happiness=5
+    happiness=5
+}
+else if(happiness<=0){
+    happiness=0
+}
+else if(happiness>=10){
+    happiness=10
 }
 else{
 happiness = a
@@ -55,7 +61,6 @@ function createHungerBar(){
         li.className = 'hungerBarItem'
         li.innerHTML='<img class="bananaIcon" src="images/bananapeel.png" alt="">'
         hungerBarList.appendChild(li)
-        console.log('li appended')
     }
 }
 function createAvailableFoodBar(){
@@ -66,21 +71,20 @@ function createAvailableFoodBar(){
         li.className = 'availableFoodItem'
         li.innerHTML ='<img class="bananaIcon" src="images/banana.png" alt="">'
         availableFoodBar.appendChild(li)
-        console.log('li appended')
     }
 }
 function createHappinessBar(){
     happinessBar.innerHTML = ''
     let happiness = localStorage.getItem('happiness')
-    happiness = 5
+    //happiness = 5
     for(i=0;i<happiness;i++){
         const li=document.createElement('li')
         li.className = 'happinessItem'
         li.innerHTML ='<img class="heartIcon" src="images/heart.png" alt="">'
         happinessBar.appendChild(li)
-        console.log('li appended')
     }
 }
+console.log(localStorage.getItem('happiness'))
 function getRandomPosition(cW,cH){
     const x= Math.floor(Math.random()*cW)
     const y= Math.floor(Math.random()*cH)
@@ -103,11 +107,28 @@ setInterval(()=>{
     else{
     hungerValue --
     localStorage.setItem('hungerValue', hungerValue)
+    let happiness = localStorage.getItem('happiness')
+    happiness--
+    storeHappinessValue(happiness)
+
     updateStatusBars()
 }
 },60000)
+let hoverTimeout
+document.querySelector('#petImage').addEventListener('mouseover',()=>{
+clearTimeout(hoverTimeout)
 
+hoverTimeout = setTimeout(()=>{
+    let happiness = localStorage.getItem('happiness')
+    happiness++
+    storeHappinessValue(happiness)
+    updateStatusBars()
+},10000)
+})
 
+document.querySelector('#petImage').addEventListener('mouseout', ()=>{
+    clearTimeout(hoverTimeout)
+})
 
 
 document.querySelector('#feedBtn').addEventListener('click',feed)
@@ -144,3 +165,29 @@ function faceChanger(){
     }
     
 }
+
+
+    function openModal(){
+        document.getElementById('nameModal').style.display = 'none';
+    }
+
+    function closeModal(){
+        const name = document.getElementById('nameModal').style.display = 'none';
+    }
+    
+    function saveMonkeyName(){
+        const name = document.getElementById('monkeyNameInput').value.trim();
+
+        if(name === "") {
+            alert("Please give your monkey a name!");
+            return;
+        }
+        else{
+            localStorage.setItem('petName',name)
+        }
+        
+document.getElementById('monkeyName').textContent = name;
+document.getElementById('monkeyCard').style.display = 'block';
+closeModal();
+    }
+

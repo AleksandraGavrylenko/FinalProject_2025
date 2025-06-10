@@ -52,7 +52,22 @@
                     <button id='feedBtn' class="feed">Feed Me</button>
                     <button id='moreFoodBtn' class="feed">Get Food</button>
                 </div>
-                
+                <button onclick="openModal()">Name Your Monkey!</button>
+                <div id="nameModal">
+                    <div class="modal-content">
+                        <button class="close-btn" onclick="closeModal()"></button>
+                        <h2>What's your monkey's name?</h2>
+                        <input type="text" id="monkeyNameInput" placeholder="Enter Monkey Name">
+                        <br><br>
+                        <button onclick="saveMonkeyName()">Save Name</button>
+                    </div>
+                </div>
+
+
+                <div id="monkeyCard">
+                    Hello! My name is <span id="monkeyName" style="font-weight:bold;"></span>!<br> I am a monkey!
+                </div>
+                    </div>
             </div>
         </div>
     </div>
