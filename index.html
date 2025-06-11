@@ -6,17 +6,23 @@
     <title>Tamagochi Pet Game</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <div class="audioPlayer">
     <audio src="/audio/Background_Music.mp3" autoplay loop></audio>
   </div>
-
-    <div class="container" id="container">
-        <div class="background" id="background">
-            <div class="pet">
+  <div class="container" id="container">
+      <div class="instructions" id="instructions">
+          <p>Hello! My name is []! Welcome to PixelPets! Please feed me, so my Hunger Bar doesn't go down to zero! If it does, my Happiness Bar will decrease! If that gets to zero, I'll die! But good news: If you pet me for 10 secs, one heart will come back!</p>
+      </div>
+      <div id="nameChange">
+        <input type="text" name="whoCares" id="nameForm">
+        <button id="nameBtn">Change Name</button>
+      </div>
+      <div class="background" id="background">
+          <div class="pet">
                 
                 <div class="petImage" id="face">
                     <img id="petImage" src="images/thumbnail_cute_monkey.png" alt="Pet Image">
@@ -52,22 +58,10 @@
                     <button id='feedBtn' class="feed">Feed Me</button>
                     <button id='moreFoodBtn' class="feed">Get Food</button>
                 </div>
-                <button onclick="openModal()">Name Your Monkey!</button>
-                <div id="nameModal">
-                    <div class="modal-content">
-                        <button class="close-btn" onclick="closeModal()"></button>
-                        <h2>What's your monkey's name?</h2>
-                        <input type="text" id="monkeyNameInput" placeholder="Enter Monkey Name">
-                        <br><br>
-                        <button onclick="saveMonkeyName()">Save Name</button>
-                    </div>
-                </div>
+                
 
 
-                <div id="monkeyCard">
-                    Hello! My name is <span id="monkeyName" style="font-weight:bold;"></span>!<br> I am a monkey!
-                </div>
-                    </div>
+                
             </div>
         </div>
     </div>

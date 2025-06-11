@@ -104,9 +104,11 @@ font-size: 20px;
 border-radius: 5px;
 height: 50px;
 width: 100px;
+
 }
 
 #moreFoodBtn {
+    position: relative;
     background-color: #852e3d;
     color: #d4ac91;
     text-decoration: solid;
@@ -116,6 +118,7 @@ width: 100px;
     border-radius: 5px;
     height: 50px;
     width: 100px;
+    top: 16px;
 }
 .bananaIcon{
 object-fit: cover;
@@ -124,7 +127,7 @@ object-fit: cover;
     width: 100vh;
     position: relative;
     right: 200px;
-    bottom: 350px;
+    bottom: 380px;
 }
 .pettingActive{
     animation:petting 0.1s infinite;
@@ -157,4 +160,20 @@ button {
     position: fixed;
     z-index: 1000;
     
+}
+
+#instructions {
+     width: 50vw;
+    top: 100px;
+    color:white;
+   font-family: "Jersey 10", sans-serif;
+   font-size: 20px;
+}
+
+.instructions{
+    width: 50vw;
+    top: 100px;
+    color:white;
+   font-family: "Jersey 10", sans-serif;
+   font-size: 20px;
 }

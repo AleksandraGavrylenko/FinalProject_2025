@@ -103,16 +103,16 @@ setInterval(()=>{
     let hungerValue = localStorage.getItem('hungerValue')
     if(hungerValue <= 0){
         alert('pls feed ur pet!')
+        let happiness = localStorage.getItem('happiness')
+        happiness--
+        storeHappinessValue(happiness)
     }
     else{
     hungerValue --
     localStorage.setItem('hungerValue', hungerValue)
-    let happiness = localStorage.getItem('happiness')
-    happiness--
-    storeHappinessValue(happiness)
 
-    updateStatusBars()
 }
+updateStatusBars()
 },60000)
 let hoverTimeout
 document.querySelector('#petImage').addEventListener('mouseover',()=>{
@@ -167,27 +167,6 @@ function faceChanger(){
 }
 
 
-    function openModal(){
-        document.getElementById('nameModal').style.display = 'none';
-    }
 
-    function closeModal(){
-        const name = document.getElementById('nameModal').style.display = 'none';
-    }
     
-    function saveMonkeyName(){
-        const name = document.getElementById('monkeyNameInput').value.trim();
-
-        if(name === "") {
-            alert("Please give your monkey a name!");
-            return;
-        }
-        else{
-            localStorage.setItem('petName',name)
-        }
-        
-document.getElementById('monkeyName').textContent = name;
-document.getElementById('monkeyCard').style.display = 'block';
-closeModal();
-    }
 
