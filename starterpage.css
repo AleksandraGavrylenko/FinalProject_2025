@@ -34,11 +34,11 @@ h1 {
 }
 
 .btn:hover {
-    background-color: ;
+    background-color: rgb(241, 107, 107);
 }
 
 .info {
     margin-top: 20px;
     font-size: 1rem;
-    color: ;
+    color: white;
 }

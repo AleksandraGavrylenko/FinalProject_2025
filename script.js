@@ -84,12 +84,29 @@ function createHappinessBar(){
         happinessBar.appendChild(li)
     }
 }
-console.log(localStorage.getItem('happiness'))
+//console.log(localStorage.getItem('happiness'))
 function getRandomPosition(cW,cH){
     const x= Math.floor(Math.random()*cW)
     const y= Math.floor(Math.random()*cH)
     return [x,y]
 }
+document.querySelector('#nameBtn').addEventListener('click',()=>{
+    let form = document.querySelector('#nameForm')
+    let infoP = document.querySelector('#infoP')
+    let btn = querySelector('#nameBtn')
+    sessionStorage.setItem('formVisible', false)
+    let formVisible = sessionStorage.getItem('formVisible')
+    if(!formVisible){
+        form.style.display = 'inline-block'
+        btn.type = 'submit'
+        btn.textContent = 'Submit'
+        sessionStorage.setItem('formVisible', true)
+    }else{
+        if(form.checkValidity()){
+            infoP.textContent = `Hello! My name is [${form.value}]! Welcome to PixelPets! Please feed me, so my Hunger Bar doesn't go down to zero! If it does, my Happiness Bar will decrease! If that gets to zero, I'll die! But good news: If you pet me for 10 secs, one heart will come back!`
+        }
+    }
+})
 function feedBtnLocation(){
     
 }
