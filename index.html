@@ -7,50 +7,72 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
 
 </head>
 <body>
 <div class="audioPlayer">
     <audio src="/audio/Background_Music.mp3" autoplay loop></audio>
   </div>
-  <div class="container" id="container">
-      <div class="instructions" id="instructions">
-          <p id="infoP">Hello! My name is []! Welcome to PixelPets! Please feed me, so my Hunger Bar doesn't go down to zero! If it does, my Happiness Bar will decrease! If that gets to zero, I'll die! But good news: If you pet me for 10 secs, one heart will come back!</p>
-      </div>
-      <div id="nameChange">
-        <form>
+  <div id="startScreen">
+    <h1>Welcome To Pixel Pets!</h1>
+    <button class="btn" id="startGameBtn">Start Game</button>
+    <div class="info">press start to begin the game </div>
+  </div>
+  <div id="deathScreen" class="font-styling">
+      I died. Your Score is --.
+    <button id="restartGame">Restart Game?</button>
+  </div>
+  <div id="higherContainer">
 
-            <input type="text" name="whoCares" id="nameForm" placeholder="enter name">
-            <button id="nameBtn">Change Name</button>
-        </form>
-      </div>
-      <div class="background" id="background">
-          <div class="pet">
-                
-                <div class="petImage" id="face">
-                    <img id="petImage" src="images/thumbnail_cute_monkey.png" alt="Pet Image">
+      <div class="container" id="container">
+          <div class="instructions" id="instructions">
+              <p id="infoP">Hello! My name is []! Welcome to PixelPets! Please feed me, so my Hunger Bar doesn't go down to zero! If it does, my Happiness Bar will decrease! If that gets to zero, I'll die! But good news: If you pet me for 10 secs, one heart will come back!</p>
             </div>
-            
-        </div>
-        <div class="ground">
-            
-            <div class="controlsMenu">
-                <div id="feed">
-                    <div class="controls">
-                        
-                        <p>Hunger Bar</p>
-                        <div id="hungerBar">
-                            <ul id="hungerBarList"></ul>  
-                        </div>
+            <div id="nameChange">
+                <br>
+                <form>
+                    <input type="text" name="whoCares" id="nameForm" placeholder=" enter name">
+                    <button type="submit" id="nameSubmit">Submit</button>
+                </form>
+            </div>
+            <button id="nameBtn">Change Name</button>
+            <div id="level">
+                <p>Level:</p>
+            </div>
+            <div id="highScore" class="font-styling">
+                <p>High Score:</p>
+            </div>
+            <div id="depletion" class="font-styling">
+                <p>Depletion: </p>
+            </div>
+            <div class="background" id="background">
+                <div class="pet">
+                    
+                    <div class="petImage" id="face">
+                        <img id="petImage" src="images/thumbnail_cute_monkey.png" alt="Pet Image">
                     </div>
-                    <div class="controls">
-                        
-                        <p>Available Food</p>
-                        <div id="availableFood">
-                            
-                        </div>
-                    </div>
-                    <div class="controls">
+                    
+                </div>
+                <div class="ground">
+                    
+                    <div class="controlsMenu">
+                        <div id="feed">
+                            <div class="controls">
+                                
+                                <p>Hunger Bar</p>
+                                <div id="hungerBar">
+                                    <ul id="hungerBarList"></ul>  
+                                </div>
+                            </div>
+                            <div class="controls">
+                                
+                                <p>Available Food</p>
+                                <div id="availableFood">
+                                    
+                                </div>
+                            </div>
+                            <div class="controls">
                         
                         <p>Happiness Bar</p>
                         <div id="happinessBar">
@@ -60,14 +82,16 @@
                     <br>
                     <button id='feedBtn' class="feed">Feed Me</button>
                     <button id='moreFoodBtn' class="feed">Get Food</button>
+                    <button id='restart' class="feed">Restart</button>
                 </div>
                 
 
-
+                
                 
             </div>
         </div>
     </div>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

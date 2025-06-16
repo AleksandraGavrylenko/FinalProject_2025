@@ -6,8 +6,56 @@
 body{
      background-color: lightcoral;
 }
+#startScreen{
+    display:block;
+    margin: 0;
+    padding: 0;
+    background: url(images/download\ \(1\).jpg) no-repeat center center/ cover;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+#deathScreen{
+    display: none;
+}
+#higherContainer{
+ display: none;
+}
 
+/* start screen styling */
+#startScreen h1{
+    font-size: 8em;
+    margin-bottom: 20px;
+}
+#startScreen .btn {
+    background-color:lightcoral;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
 
+#startScreen .btn:hover {
+    background-color: rgb(241, 107, 107);
+}
+
+#startScreen .info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white;
+}
 
 #feed p {
     color: #852e3d;
@@ -120,6 +168,18 @@ width: 100px;
     width: 100px;
     top: 16px;
 }
+#restart{
+    position:relative;
+background-color: #852e3d;
+color: #d4ac91;
+text-decoration: solid;
+border-color:#d4ac91 ;
+font-family: "Jersey 10", sans-serif;
+font-size: 20px;
+border-radius: 5px;
+height: 50px;
+width: 100px;
+}
 .bananaIcon{
 object-fit: cover;
 }
@@ -179,8 +239,36 @@ button {
 }
 
 #nameForm{
-    display: none;
+    display: inline-block;
+    font-family:  "Jersey 10", sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #f5bbbb;
 }
 #nameBtn{
     display:block;
+    font-family:  "Jersey 10", sans-serif;
+    border-color: #6c3125;
+    border-width: 1px;
+    font-size: 20px;
+}
+#nameChange{
+    display: none;
+    font-family:  "Jersey 10", sans-serif;
+    font-size: 20px;
+}
+#nameSubmit{
+    display: block;
+    font-family:  "Jersey 10", sans-serif;
+    font-size: 20px;
+}
+#level{
+     display: block;
+    font-family:  "Jersey 10", sans-serif;
+    font-size: 20px;
+}
+.font-styling{
+     display: block;
+    font-family:  "Jersey 10", sans-serif;
+    font-size: 20px;
 }
