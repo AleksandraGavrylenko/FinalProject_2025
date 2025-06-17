@@ -185,7 +185,7 @@ function levelUp(){
     }
     level++
     let depletion = 15000 - level*500
-    if(depletion < 5000) depletion = 5000 // Minimum depletion time
+    if(depletion < 50) depletion = 50 // Minimum depletion time
     localStorage.setItem('level', level)
     localStorage.setItem('depletion', depletion)
 }
@@ -283,6 +283,7 @@ document.querySelector('#petImage').addEventListener('mouseout', ()=>{
 
 document.querySelector('#feedBtn').addEventListener('click',feed)
 document.querySelector('#feedBtn').addEventListener('click',()=>{
+     document.querySelector('#petImage').src = 'images/thumbnail_fed_monkey.png'
     setTimeout(()=>{
         faceChanger()
     },750)
